@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Display Fundamental</title>
+    <style>
+        /* div{
+            color: blue;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+
+        span{
+            color: blue;
+        } */
+
+        section {
+            border: 1px solid black;
+            width: 600px;
+            height: 600px;
+            display: flex; 
+            /* display flex menyebabkan semua div menjadi satu baris ke kanan */
+            flex-direction: row;
+            /* flex-direction defaultnya adalah row, nilainya bisa juga row-reverse atau column-reverse*/
+            flex-wrap: wrap;
+            /* jika nilainya wrap maka dia tidak memaksakan satu baris tapi turun ke bawah atau tidak memaksakan sedangkan jika nowrap maka dia akan memaksakan satu baris */
+            justify-content: flex-start;
+            /* justify-content memiliki nilai default flex-start berfungsi untuk mengatur secara horizontal, untuk memindahkannya ke kanan maka dengan flex-end, selain itu nilainya bisa juga center, space-around (memberikan jarak antar div), space between, space-evenly */
+            align-items: stretch;
+            /* align-items memiliki nilai default flex-start fungsinya untuk menyesuaikan/mengatur secara vertikal, jika nilainya stretch maka tinggi div akan menyesuaikan dengan tinggi section, dan untuk menggunakan strecth ini maka kita hapus dulu tinggi dari div nya, 
+            tapi kalau dia tidak memiliki tinggi tapi menggunakan selain stretch maka tingginya akan menyesuaikan dengan kontennya */
+        }
+
+        div {
+            width: 100px;
+            /* height: 100px; */
+            background-color: yellow;
+            border: 1px solid black
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </section>
+    <!-- <section>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Modi <div>Display</div>tempora debitis sapiente, laudantium
+        at quas unde recusandae voluptatem repudiandae dicta?
+        <hr>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Modi <span>Display</span> tempora debitis sapiente, laudantium
+        at quas unde recusandae voluptatem repudiandae dicta?
+    </section> -->
+
+    
+</body>
+</html>
