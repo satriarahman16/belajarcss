@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Display Fundamental</title>
+    <style>
+        /* div{
+            color: blue;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+
+        span{
+            color: blue;
+        } */
+
+        section {
+            border: 1px solid black;
+            width: 600px;
+            height: 600px;
+            display: grid; 
+            /* grid-template-columns: 1fr 2fr; */
+            /* maksud dari kode di atas bahwa akan terbagi menjadi dua kolom, kolom pertama sebesar 1 fr dan kolom kedua 2fr
+            fr merupakan satuan yang membagi berdasarkan bagian, sehingga pada contoh di atas ada 3 kolom yang dibagi 1 : 2 */
+           
+            grid-auto-columns: repeat(2, 1fr);
+            /* selain menggunakan grid-template-columns: 1fr 2fr; juga bisa dengan repeat */
+            grid-template-rows: 1fr 3fr 2fr;
+
+            grid-template-areas: 
+            "tiga satu"
+            "tiga dua"
+            "empat lima"
+            ;
+
+            /* satu tanda petik artinya satu baris */
+            
+        }
+
+        div {
+            /* width: 100px; */
+            /* height: 100px; */
+            background-color: yellow;
+            border: 1px solid black
+        }
+
+        #satu{
+            grid-area: satu;
+        }
+
+        #dua{
+            grid-area: dua;
+        }
+
+        #tiga{
+            grid-area: tiga;
+        }
+
+        #empat{
+            grid-area: empat;
+        }
+
+        #lima{
+            grid-area: lima;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section>
+        <div id="satu">1</div>
+        <div id="dua">2</div>
+        <div id="tiga">3</div>
+        <div id="empat">4</div>
+        <div id="lima">5</div>
+    </section>
+
+</body>
+</html>
