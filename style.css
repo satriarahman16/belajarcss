@@ -7,6 +7,31 @@ html, body{
     margin: 0;
 }
 
+/* #dummy{
+    width: 500px;
+    height: 500px;
+    background-color: red; */
+    /* position: static; */
+    /* position secara default memiliki value static */
+    /* position: relative; */
+    /* left: 100px; */
+    /* top: 0; */
+    /* kalau position static kita tidak bisa menggunakan left, right, top, bottom sehingga kita pakai relative dia akan relatif terhadap viewport*/
+    /* position: fixed; */
+    /* jika menggunakan fixed maka tempatnya hanya sebatas kotak itu doang */
+    /* position: sticky; */
+    /* position sticky mirip dengan fixed bedanya ketika kita menggunakan position fixed dengan top nilainya nol maka dia akan menempel dengan viewport
+    tapi kalau kita menggunakan sticky dia akan reversi tempatnya dan ketika kita scroll akan menyentuh atas viewport jika top nya 0 */
+    /* position: relative; */
+    /* position absoulte mirip dengan fixed bedanya ketika discroll dia tidak ikut dan dia relatif dengan parentnya */
+/* } */
+
+/* #dummy img{
+    position: absolute; */
+    /* dia akan relatif terhadap parent dalam hal ini dummy yang memiliki position relative */
+    /* right :0px;
+} */
+
 h1 {
     font-weight: 700;
     font-size: 48px;
@@ -69,6 +94,10 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 16px 128px;
+    position: sticky;
+    /* sticky berfungsi hanya dengan top sama dengan nol */
+    top: 0;
+    background-color: #FFFFFF;
 }
 
 #header h1{
@@ -91,8 +120,12 @@ section {
 }
 
 nav > a{
-    color:#FFC108;
+    /* color: #000; */
     margin-left: 12px;;
+}
+
+nav > a:hover{
+    color: #FFC108;
 }
 
 #about{
@@ -133,6 +166,21 @@ nav > a{
     justify-content: space-between;
 }
 
+.service-header h1{
+    position: relative;
+}
+.service-header h1::before{
+    content: "";
+    /* content perlu ditambahkan jika ada before */
+    width: 60px;
+    height: 60px;
+    background: url("./images/accent1.svg");
+    position: absolute;
+    left:-20px;
+    top: -10px;
+    z-index: -1;
+}
+
 .service-detail {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -156,6 +204,20 @@ nav > a{
     padding: 0 16px;
 }
 
+#contact h1{
+    position: relative;
+}
+
+#contact > h1::before{
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: url("./images/accent2.svg");
+    left: -20px;
+    top: -10px;
+    z-index: -1;
+}
 .contact-detail {
     display: flex;
     justify-content: space-between;
@@ -176,9 +238,11 @@ form h1{
 }
 form button{
     border:none;
-
 }
 
+form button:hover{
+    cursor: pointer;
+}
 .form-group{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -223,6 +287,11 @@ form button{
     outline:none;
     border-bottom: 1px solid black;
     font-size: 20px;
+}
+
+.input-group input:focus{
+
+    border-bottom: 2px solid #FFC108;
 }
 
 
